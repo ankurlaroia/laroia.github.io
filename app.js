@@ -27,7 +27,7 @@ app.post('/send-email', (req, res) => {
         service: 'Gmail',
         auth: {
             user: 'ankurlaroia1@gmail.com', // Your email address
-            pass: 'vjbp lhgo pkgb vtoj' // Use environment variable for email password
+            pass: 'vjbp lhgo pkgb vtoj'' // Use environment variable for email password
         }
     });
 
