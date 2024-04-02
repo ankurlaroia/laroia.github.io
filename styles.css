@@ -1,0 +1,142 @@
+/* Global Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles for the navigation bar */
+header {
+    background-color: #000; /* Black color for header */
+    padding: 15px 0;
+    border-radius: 15px; /* Slightly rounded corners */
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 15px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+nav ul li a:hover {
+    background-color: #333; /* Darker background color on hover */
+}
+
+/* Style for sections */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    margin-bottom: 40px; /* Increased spacing between sections */
+}
+
+.section-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Styles for chat widget */
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 9999;
+    max-width: 300px;
+}
+
+.chat-widget.minimized {
+    max-width: 50px;
+    max-height: 50px;
+    overflow: hidden;
+}
+
+.minimize-button {
+    display: block;
+    margin-top: 10px;
+}
+
+.minimized {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 9999;
+}
+/* Styles for minimized popup chat */
+.popup-chat {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #e0e0e0; /* Slightly darker grey background color */
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.popup-chat.minimized {
+  display: block;
+}
+
+.popup-chat .close {
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #000;
+  font-size: 20px;
+}
+
+.minimize-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.minimize-button.minimized {
+  display: none;
+  
+}
+
+/* Added CSS rule to hide form fields */
+.hidden {
+  display: none;
+}
